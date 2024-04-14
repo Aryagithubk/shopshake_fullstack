@@ -1,0 +1,22 @@
+<div class="relative">
+  <div class="carousel-container overflow-x-hidden">
+    <div
+      class="carousel"
+      [style.transform]="'translateX(-' + currentSlide * 100 + '%)'"
+    >
+      <ng-container class="" *ngFor="let item of carouselData; let i = index">
+        <a [routerLink]="item.path" class="carousel-item relative">
+          <div
+            class="absolute flex text-center text-white p-3 px-10 bg-[#800064] rounded-3xl top-[85%] left-[44%] hover:animate-pulse hover:bg-[#550080]"
+          >
+            <div class="flex self-center">Shop Now</div>
+            <div class="scale-90 flex self-center">
+              <mat-icon>arrow_forward</mat-icon>
+            </div>
+          </div>
+          <img [src]="item.image" alt="Carousel Image" />
+        </a>
+      </ng-container>
+    </div>
+  </div>
+</div>
